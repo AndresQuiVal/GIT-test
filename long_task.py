@@ -1,4 +1,5 @@
 import asyncio
+import time
 
 async def long_task(id, time):
     print(f"Task {id} started")
@@ -16,9 +17,13 @@ async def async_func():
 def print_msg(msg):
     print(f"HOLA: {msg}")
 
+def print_finished(msg):
+    print(f"FINISHED, TIME: {time.time()}, MESSAGE: {msg}")
+
 def run():
     asyncio.run(async_func())
     print_msg("MUNDO")
+    print_finished("tasks completed")
 
 if __name__ == '__main__':
     run()
