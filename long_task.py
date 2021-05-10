@@ -12,8 +12,13 @@ async def async_func():
         long_task(3, 3)
     )
 
+
+def print_msg(msg):
+    print(f"HOLA: {msg}")
+
 def run():
     asyncio.run(async_func())
+    print_msg("MUNDO")
 
 if __name__ == '__main__':
     run()
