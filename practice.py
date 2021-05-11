@@ -20,9 +20,6 @@ def print_msg(msg):
 def print_finished(msg):
     print(f"FINISHED, TIME: {time.time()}, MESSAGE: {msg}")
 
-def vap(random):
-    print(f"random message is: {random}")
-
 def run():
     asyncio.run(async_func())
     print_msg("MUNDO")
