@@ -14,19 +14,19 @@ async def async_func():
     )
 
 
-def print_msg(msg):
-    print(f"HOLA: {msg}")
+def get_total_time(start_time):
+    """
+    Calculates the total time that it took to execute the script
+    """
+    return time.time() - start_time
 
 def print_finished(msg):
     print(f"FINISHED, TIME: {time.time()}, MESSAGE: {msg}")
 
-def vap(random):
-    print(f"random message is: {random}")
-
 def run():
+    start_time = time.time()
     asyncio.run(async_func())
-    print_msg("MUNDO")
     print_finished("tasks completed")
-
+    print("Total time spent on executing the script: {}".format(get_total_time(start_time)))
 if __name__ == '__main__':
     run()
