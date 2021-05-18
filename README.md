@@ -1,2 +1,2 @@
 # git-test
-We perform git operations inside git
+Changed README.md content for testing purposes
